@@ -1,0 +1,37 @@
+﻿@model CitaViewModel
+@{
+    ViewData["Title"] = "Aplazar Cita";
+}
+
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <!-- Aumentamos el tamaño de la tarjeta -->
+            <div class="card shadow-lg">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="mb-0 text-center">Aplazar Cita</h3>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="mb-4">¿Estás seguro de que deseas aplazar esta cita?</h5>
+                    <p class="mb-2"><strong>Doctor:</strong> @Model.idDoctor</p>
+                    <p class="mb-2"><strong>Especialidad:</strong> @Model.idEspecialidad</p>
+                    <p class="mb-2"><strong>Fecha programada:</strong> @Model.FechaCita</p>
+                    <p class="mb-4"><strong>Hora programada:</strong> @Model.HoraCita</p>
+
+                    <!-- Botones con separación ajustada -->
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <form method="post" asp-controller="Cita" asp-action="AplazarCitas" asp-route-id="@Model.IdCita">
+                            <button type="submit" class="btn btn-warning btn-lg px-4">
+                                <i class="fa-solid fa-clock"></i> Confirmar
+                            </button>
+                        </form>
+                        <a asp-action="ListarCitas" asp-controller="Cita" class="btn btn-secondary btn-lg px-4">
+                            <i class="fa-solid fa-arrow-left"></i> Cancelar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

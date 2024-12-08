@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProyectoIntegradorClinica.DataAccess.Entities.EspecialidadEntity>
+@{
+    ViewData["Title"] = "Especialidades";
+}
+
+<div class="col>
+
+    <div class="row">
+        <h2 class="mb-4 text-center">Nuestras Especialidades</h2>
+        <p class="mb-5 text-center">Contamos con una gran variedad de especialidades para atender tus necesidades y las de tu familia.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h2 class="mb-4 text-center">Nuestras Especialidades</h2>
+        </div>
+        <div class="col-4">
+            <p class="mb-5 text-center">Contamos con una gran variedad de especialidades para atender tus necesidades y las de tu familia.</p>
+        </div>
+    </div>
+
+    <div class="row">
+    @foreach (var especialidad in Model)
+    {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@especialidad.NombreEspecialidad</h5>
+                        <p class="card-text">@especialidad.DescripcionEspecialidad</p>
+                        <p class="fw-bold">S/ @especialidad.PrecioConsultaEspecialidad.ToString("0.00")</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+    }
+    </div>
+</div>

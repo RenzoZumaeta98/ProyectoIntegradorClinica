@@ -1,0 +1,128 @@
+﻿@model CitaViewModel
+@{
+    ViewData["Title"] = "AgendarCita";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <a class="navbar-brand" href="#"><img src="../images/logoangelashealth.png" style="width: 130px" /></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Especialidad" asp-action="IndexEspecialidades" asp-route-idusuario="@Model.idUsuario" asp-route-nombre="" asp-route-apellido="">
+                    Especialidades
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Doctores</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ayuda</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-secondary my-2 my-sm-0 m-1">Cerrar Sesión</button>
+        <i class="fa-solid fa-user m-2" style="font-size:37px"></i>
+    </div>
+</nav>
+
+
+<h1>Agenda tu Cita</h1>
+
+<div class="container mt-5 pt-5 mb-5">
+    <div class="col-md-12">
+
+        <form method="post" asp-controller="Cita" asp-action="SaveReserva">
+
+            <input type="hidden" asp-for="idUsuario" value="@Model.idUsuario" />
+            <div class="row">
+                <div class="col-md-12 mt-4 mb-2 p-3" style="border: 1px solid black; border-radius:25px">
+                    <h5>Elige la especialidad que necesites</h5>
+                    <select style="width:240px; height:40px">
+                        <option value="" disabled selected>Seleccione especialidad...</option>
+                        @foreach (var item in Model.Especialidades)
+                        {
+                            <option value="@item.IdEspecialidad">@item.NombreEspecialidad</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mt-4 mb-2 p-3" style="border: 1px solid black; border-radius:25px">
+                    <h5>Elige fecha y hora</h5>
+
+                    <div class="form-group">
+                        <label for="fecha">Selecciona una fecha:</label>
+                        <input placeholder="dd/mm/yyyy" asp-for="FechaCita" required type="date" class="form-control m-2" id="fecha" style="width:240px">
+                    </div>
+
+
+
+                    <select asp-for="HoraCita" style="width:240px; height:40px" class="ml-2">
+                        <option value="" disabled selected>Seleccione hora de cita...</option>
+                        <option value="8:30-9:00">8:30-9:00</option>
+                        <option value="9:00-9:30">9:00-9:30</option>
+                        <option value="9:30-10:00">9:30-10:00</option>
+                        <option value="10:00-10:30">10:00-10:30</option>
+                        <option value="10:30-11:00">10:30-11:00</option>
+                        <option value="11:00-11:30">11:00-11:30</option>
+                        <option value="11:30-12:00">11:30-12:00</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mt-4 mb-2 p-3" style="border: 1px solid black; border-radius:25px">
+                    <h5>Elige tu doctor</h5>
+                    <select asp-for="idDoctor" style="width:240px; height:40px">
+                        <option value="" disabled selected>Seleccione doctor...</option>
+                        @foreach (var item in Model.Doctores)
+                        {
+                            <option value="@item.IdDoctor">@item.NombreDoctor @item.ApellidoDoctor </option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 offset-8 mt-4 mb-2">
+                    <button class="form-control btn-primary" type="submit">Reservar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="col-2 mt-4 mb-2">
+    <form method="post" asp-controller="Login" asp-action="PaginaUsuarioVolver">
+        <input type="hidden" asp-for="idUsuario" value="@Model.idUsuario" />
+        <button class="form-control btn-secondary" type="submit">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+        </button>
+    </form>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+
+            var currentDate = new Date();
+            var formattedDate = currentDate.getFullYear() + '-' + ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' + ('0' + currentDate.getDate()).slice(-2);
+
+
+            $('#fecha').datepicker({
+                format: 'yyyy-mm-dd',
+                startDate: formattedDate,
+                autoclose: true,
+                language: 'es'
+            });
+        });
+    </script>
+}

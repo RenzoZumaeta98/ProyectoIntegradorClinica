@@ -1,0 +1,84 @@
+﻿@model CitaPagoViewModel
+@{
+    ViewData["Title"] = "PagarCita";
+}
+
+<h1>PagarCita</h1>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <form method="post" asp-controller="Cita" asp-action="SavePago">
+            <div class="row">
+
+                <div class="col-md-5 mr-4">
+
+                    <div class="row">
+                        <div class="col-md-12 mt-4 mb-2 p-3" style="border: 1px solid black; border-radius:25px">
+                            <h5>Ingresa los datos de tu tarjeta</h5>
+                            <input asp-for="IdCita" value="@Model.IdCita" type="hidden">
+                            <input asp-for="EstadoCDP" value="Pagado" type="hidden">
+                            <input asp-for="PrecioCita" value="@Model.Costo" type="hidden">
+                            <input asp-for="NroTarjeta" placeholder="Número de tarjeta" type="text" required class="form-control mt-1 mb-1">
+                            <select class="form-control mt-1 mb-1" style="width:240px; height:40px">
+                                <option value="" disabled selected>Mes de vencimiento</option>
+                                @for (int i = 1; i < 13; i++)
+                                {
+                                    <option value=@i>@i</option>
+                                }
+
+                            </select>
+                            <select class="form-control mt-1 mb-1" style="width:240px; height:40px">
+                                <option value="" disabled selected>Año de vencimiento</option>
+                                @for (int i = 2023; i < 2029; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                            <input placeholder="CVV" type="text" required class="form-control mt-1 mb-1">
+
+                            <h5>Selecciona tu tipo de comprobante</h5>
+                            <select asp-for="TipoCDP" class="form-control mt-1 mb-1" style="width:240px; height:40px">
+                                <option value="Boleta">Boleta</option>
+                                <option value="Factura">Factura</option>
+                            </select>
+                            <input asp-for="NroFactura" placeholder="Número de RUC" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 ml-4">
+
+                    <div class="row">
+                        <div class="col-md-12 mt-4 mb-2 p-3" style="border: 1px solid black; border-radius:25px">
+                            <h5>Detalles de Cita</h5>
+                            <label>Paciente: @Model.Paciente</label><br />
+                            <label>Documento: @Model.DocumentoPaciente</label><br />
+                            <label>Especialidad: @Model.Especialidad</label><br />
+                            <label>Fecha: @Model.Fecha.Substring(0, 10)</label><br />
+                            <label>Hora: @Model.Hora</label><br />
+                            <label>Costo: S/ @Model.Costo</label><br />
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="row mt-2">
+
+                <div class="col-2 mt-4 mb-2">
+                    <button class="form-control btn-secondary">Volver</button>
+                </div>
+                <div class="col-2 offset-8 mt-4 mb-2">
+                    <button class="form-control btn-primary" type="submit">Pagar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+

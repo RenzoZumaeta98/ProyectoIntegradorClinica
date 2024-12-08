@@ -1,0 +1,32 @@
+﻿@model UsuarioViewModel
+@{
+    ViewData["Title"] = "Cita Reservada";
+}
+
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow-lg p-4">
+                <div class="card-body">
+                    <h1 class="display-5 text-success mb-4">
+                        <i class="fa-solid fa-check-circle"></i> ¡Cita Reservada con Éxito!
+                    </h1>
+                    <p class="lead mb-4">Gracias, <span class="fw-bold">@Model.NombreUsuario</span>. Tu cita ha sido registrada correctamente. Nos alegra poder ayudarte.</p>
+
+                    <div class="alert alert-info mb-4">
+                        <p>Si necesitas más información o realizar cambios en tu cita, puedes volver a tu página de usuario para gestionar tus opciones.</p>
+                    </div>
+
+                    <form method="post" asp-controller="Login" asp-action="PaginaUsuario">
+                        <input type="hidden" asp-for="IdUsuario" value="@Model.IdUsuario">
+                        <input type="hidden" asp-for="CorreoUsuario" value="@Model.CorreoUsuario">
+                        <input type="hidden" asp-for="ClaveUsuario" value="@Model.ClaveUsuario">
+                        <button class="btn btn-primary btn-lg" type="submit">
+                            <i class="fa-solid fa-home"></i> Volver a la Página Principal
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
