@@ -76,3 +76,4 @@ C:\Users\renzo\Desktop\PROYECTO INTEGRADOR\ProyectoIntegradorClinica\ProyectoInt
 C:\Users\renzo\Desktop\PROYECTO INTEGRADOR\ProyectoIntegradorClinica\ProyectoIntegradorClinica\obj\Debug\net6.0\ProyectoIntegradorClinica.pdb
 C:\Users\renzo\Desktop\PROYECTO INTEGRADOR\ProyectoIntegradorClinica\ProyectoIntegradorClinica\obj\Debug\net6.0\ProyectoIntegradorClinica.genruntimeconfig.cache
 C:\Users\renzo\Desktop\PROYECTO INTEGRADOR\ProyectoIntegradorClinica\ProyectoIntegradorClinica\obj\Debug\net6.0\ref\ProyectoIntegradorClinica.dll
+C:\Users\renzo\Desktop\PROYECTO INTEGRADOR\ProyectoIntegradorClinica\ProyectoIntegradorClinica\obj\Debug\net6.0\ProyectoIntegradorClinica.sourcelink.json

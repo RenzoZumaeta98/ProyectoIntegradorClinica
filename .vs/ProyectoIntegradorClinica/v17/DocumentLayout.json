@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|c:\\users\\renzo\\desktop\\proyecto integrador\\proyectointegradorclinica\\proyectointegradorclinica\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|solutionrelative:proyectointegradorclinica\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|c:\\users\\renzo\\desktop\\proyecto integrador\\proyectointegradorclinica\\proyectointegradorclinica\\views\\login\\paginausuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|solutionrelative:proyectointegradorclinica\\views\\login\\paginausuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|c:\\users\\renzo\\desktop\\proyecto integrador\\proyectointegradorclinica\\proyectointegradorclinica\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4E3FB1EC-AE7A-4066-85CE-52305C960B9A}|ProyectoIntegradorClinica\\ProyectoIntegradorClinica.csproj|solutionrelative:proyectointegradorclinica\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,15 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIntegradorClinica\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProyectoIntegradorClinica\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAPUAAAAAAAAAAAAAAAQBAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T04:19:47.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaginaUsuario.cshtml",
+              "DocumentMoniker": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Login\\PaginaUsuario.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIntegradorClinica\\Views\\Login\\PaginaUsuario.cshtml",
+              "ToolTip": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Login\\PaginaUsuario.cshtml",
+              "RelativeToolTip": "ProyectoIntegradorClinica\\Views\\Login\\PaginaUsuario.cshtml",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAGoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T01:17:01.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProyectoIntegradorClinica\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\renzo\\Desktop\\PROYECTO INTEGRADOR\\ProyectoIntegradorClinica\\ProyectoIntegradorClinica\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProyectoIntegradorClinica\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEkAAAAOAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T22:49:00.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T22:49:00.42Z"
             }
           ]
         }
